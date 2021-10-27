@@ -1,15 +1,12 @@
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import { forwardRef } from "react";
-const Thumbnail = forwardRef(({ result, ref }) => {
+const Thumbnail = ({ result }) => {
   const BASE_URL = "https://image.tmdb.org/t/p/w500";
 
   //   console.log(`${BASE_URL}${result.backdrop_path}`);
   return (
-    <div
-      ref={ref}
-      className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50"
-    >
+    <div className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50">
       <Image
         layout="responsive"
         height={1000}
@@ -34,6 +31,6 @@ const Thumbnail = forwardRef(({ result, ref }) => {
       </div>
     </div>
   );
-});
+};
 
 export default Thumbnail;
